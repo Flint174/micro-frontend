@@ -29,9 +29,10 @@ module.exports = {
   eslint: null,
   devServer: {
     port: 3001,
-    static: {
-      directory: path.join(__dirname, "dist"),
-    },
+    static: [
+      { directory: path.join(__dirname, "dist") },
+      { directory: path.join(__dirname, "public") },
+    ],
   },
   webpack: {
     configure: {
